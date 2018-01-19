@@ -1,10 +1,21 @@
-<h2>gitty</h2>
-<div>
-  <h4>Find a GitHub user</h4>
-  <form onsubmit="return getUsername(userNameForm.username.value)" name="userNameForm" >
-    <label for="username">To start, enter a GitHub username: </label>
-    <input type="text" id="username"></input>
-    <button>Submit</button>
-  </form>
-
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="site.css" rel="stylesheet">
+	<script type="text/javascript" src="gitty.js"></script>
+</head>
+<body>
+	<div>
+		<h2>gitty</h2>
+		<div>
+		  <h4>Find a GitHub user</h4>
+		  <form onsubmit="return getUsername(userNameForm.username.value)" name="userNameForm" >
+		    <label for="username">To start, enter a GitHub username: </label>
+		    <input type="text" id="username"></input>
+		    <button>Submit</button>
+		  </form>
+		</div>
+		<div id="imageDiv"></div>
+	</div>
+</body>
+</html>

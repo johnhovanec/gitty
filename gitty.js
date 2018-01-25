@@ -48,7 +48,7 @@ var gitty = (function() {
   };
 
   var loadUserInfo = function() {
-    // Load the user image
+    // Load the user image into the page
     var image = document.createElement("img");
     var imageParent = document.getElementById("imageDiv");
     image.id = "avatar";
@@ -56,10 +56,10 @@ var gitty = (function() {
     image.src = userAvatar;
     imageParent.appendChild(image);
 
-    // Load the user's details
-    var userInfo = document.createElement("p");
+    // Load the user's details into the page
+    var userInfo = document.createElement("h3");
     var userInfoParent = document.getElementById("userInfoDiv");
-    userInfo.innerHTML = "<strong>" + userName + "</strong> | " + userLocation + "<br>" + userRepos;
+    userInfo.innerHTML = userName + " | " + userLocation + "<br>" + userRepos;
     userInfoParent.appendChild(userInfo);
 
     console.log(":: ", userName, userLocation, userRepos);

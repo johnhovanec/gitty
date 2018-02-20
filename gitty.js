@@ -6,7 +6,7 @@ function getUsername(formName) {
   return false;
 }
 
-// gitty module with Revealing Module pattern
+// gitty module
 var gitty = (function() {
   var userName = "";
   var userAvatar = "";
@@ -96,3 +96,16 @@ var gitHubAccount = (function(gitty) {
   
 })(gitty);
 
+
+// Google Maps API code
+function initMap() {
+  var uluru = {lat: 39.393, lng: -76.604};
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 2,
+    center: uluru
+  });
+  var marker = new google.maps.Marker({
+    position: uluru,
+    map: map
+  });
+  }

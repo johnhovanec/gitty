@@ -59,7 +59,7 @@ var gitty = (function() {
     // Load the user's details into the page
     var userInfo = document.createElement("h3");
     var userInfoParent = document.getElementById("userInfoDiv");
-    userInfo.innerHTML = userName + " | " + userLocation + "<br>" + userRepos;
+    userInfo.innerHTML = userName + " | " + userLocation + "<br>" + "repos: " + userRepos;
     userInfoParent.appendChild(userInfo);
 
     console.log(":: ", userName, userLocation, userRepos);

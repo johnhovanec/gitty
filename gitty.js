@@ -49,18 +49,37 @@ var gitty = (function() {
 
   var loadUserInfo = function() {
     // Load the user image into the page
+    if (document.getElementById('imageDiv').children.length > 0)
+    {
+      // If there is already an image, let's remove it
+      var imageNode = document.getElementById("imageDiv");
+      while (imageNode.firstChild) 
+      {
+          imageNode.removeChild(imageNode.firstChild);
+      }
+    }
     var image = document.createElement("img");
     var imageParent = document.getElementById("imageDiv");
     image.id = "avatar";
     image.width = 175;
     image.src = userAvatar;
-    imageParent.appendChild(image);
+    imageParent.appendChild(image); 
 
     // Load the user's details into the page
+    if (document.getElementById('userInfoDiv').children.length > 0)
+    {
+      // Remove user info if it exists
+      var textNode = document.getElementById("userInfoDiv");
+      while (textNode.firstChild) 
+      {
+          textNode.removeChild(textNode.firstChild);
+      }
+    }
     var userInfo = document.createElement("h3");
     var userInfoParent = document.getElementById("userInfoDiv");
     userInfo.innerHTML = userName + " | " + userLocation + "<br>" + "repos: " + userRepos;
     userInfoParent.appendChild(userInfo);
+    
 
     console.log(":: ", userName, userLocation, userRepos);
   };

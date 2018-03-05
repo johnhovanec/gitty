@@ -77,7 +77,6 @@ var gitty = (function() {
     userInfo.innerHTML = userName + " | " + userLocation + "<br>" + "repos: " + userRepos;
     userInfoParent.appendChild(userInfo);
     
-
     console.log(":: ", userName, userLocation, userRepos);
   };
   

@@ -112,6 +112,8 @@ var gitHubAccount = (function(gitty) {
 })(gitty);
 
 
+// Add Geocoding call to Google Maps
+
 // Google Maps API code
 function initMap() {
   var uluru = {lat: 39.393, lng: -76.604};
